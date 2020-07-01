@@ -1,0 +1,1170 @@
+/*
+*header
+*/
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 20;
+}
+
+/**********************탑 네비********************/
+.top-nav{
+	overflow: hidden;
+	border-bottom: solid 1px #eaeaea;
+}
+.top-nav .nav-container{
+	float: right;
+	margin: 10px 5% 10px 0;
+}
+.nav-container a.a-dot:after{
+	content: "·";
+	margin: 0 5px;
+}
+.nav-line{
+	width: 1px;
+	height: 10px;
+	border: solid 1px #eaeaea;
+	margin: 0 15px;
+}
+.nav-container svg{
+	fill: #999;
+	vertical-align: middle;
+}
+
+/********************* 아래 네비 ********************/
+.bottom-nav{
+	width: 100%;
+	position: relative;
+}
+/*------------왼쪽 로고--------------*/
+.left-nav{
+	position: absolute;
+	top: 0;
+	left: 5%;
+	line-height: 70px;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+/*------------가운데 메뉴--------------*/
+.center-nav{
+	width: 100%;
+	margin: 0 auto;
+	height: 70px;
+}
+.center-nav .menu {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navi-line{
+	width: 0px;
+	height: 2px;
+	background-color: #f22c2d;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+.center-nav .menu> li{
+	text-align: center;
+}
+.center-nav .menu> li a{
+	line-height: 70px;
+	font-size: 15px;
+	padding: 0 10px;
+	margin: 0 10px;
+	display: block;
+	transition-duration: 0.5s;
+	position: relative;
+}
+
+.center-nav .menu li a:before {
+	content: '';
+	left: 0px;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #f22c2d;
+	bottom: 0px;
+	opacity: 0;
+}
+
+.center-nav .menu> li.new-menu a{
+	font-family: 'East Sea Dokdo', cursive;
+	font-size: 25px;
+}
+.center-nav .menu> li.new-menu span{
+	color: #f22c2d;
+	display: block;
+	line-height: 0;
+	transform: translateY(15px);
+	font-size: 20px;
+}
+
+/*----서브 메뉴 창----*/
+div.sub-menu{
+	width: 100%;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	background-color: #fff;
+	text-align: center;
+	height: 0px;
+	overflow: hidden;
+}
+
+.sub-menu .sub-cotainer {
+	display: inline-block;
+	text-align: left;
+	overflow: hidden;
+	padding: 25px;
+}
+.sub-cotainer> div{
+	float: left;
+	margin-right: 50px;
+}
+.sub-cotainer> div:last-child{
+	margin: 0;
+}
+.sub-cotainer ul li{
+	margin-top: 20px;
+	color: #666;
+	cursor: pointer;
+}
+/*가로넘어가는 리스트*/
+.over-list{
+	overflow: hidden;
+}
+.over-list ul{
+	float: left;
+	margin-right: 40px;
+}
+.over-list ul:last-child{
+	margin-right: 0;
+}
+
+/*li 단독 리스트*/
+.sub-2-1 ul li:first-child,
+.sub-6-5 ul li:first-child{
+	margin-top: 0;
+}
+.sub-6-5 ul li{
+	color: #000;
+	font-weight: 800;
+}
+
+/*------------로그인, 서치 창--------------*/
+.login,
+.search{
+	position: absolute;
+	width: 100%;
+	top: 70px;
+	left: 0;
+	background-color: #fff;
+	box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.2);
+	display: none;
+}
+
+/*------------로그인, 서치 창 공통라인--------------*/
+.popcontent-title{
+	width: 100%;
+	position: relative;
+}
+.popcontent-title p{
+	width: 150px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 50px;
+	color: #a48443;
+	font-family: 'Nanum Myeongjo', serif;
+}
+.popcontent-title p:after,
+.popcontent-title p:before{
+	content: "";
+	width: calc(50% - 75px);
+	height: 1px;
+	background-color: #e5e5e5;
+	position: absolute;
+	top: 50%;
+}
+.popcontent-title p:after{
+	left: 0;
+}
+.popcontent-title p:before{
+	right: 0;
+}
+.close-popmenu{
+	position: absolute;
+	top: 0;
+	right: 5%;
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	border: solid 1px #e5e5e5;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*---------------로그인 창----------------*/
+.login-container{
+	width: 24%;
+	margin: 50px auto;
+}
+.login-input{
+	width: 100%;
+	overflow: hidden;
+}
+.login-input >div{
+	float: left;
+}
+.login-btn{
+	cursor: pointer;
+}
+
+/*왼쪽 인풋창 제어*/
+.login-input >div.input-left{
+	width: calc(75% - 5px);
+	margin-right: 10px;
+}
+div.input-left> div{
+	width: 100%;
+	background-color: #f5f5f5;
+	line-height: 50px;
+	border-radius: 10px;
+}
+div.input-left> div:last-child{
+	margin-top: 10px;
+}
+.input-left svg{
+	vertical-align: middle;
+	margin: 0 20px;
+}
+.input-left input{
+	border: 0;
+	background-color: transparent;
+	font-size: 15px;
+	line-height: 50px;
+}
+/*오른쪽 로그인 제어*/
+.login-input> div.input-right{
+	width: calc(25% - 5px);
+	height: 110px;
+}
+div.input-right button{
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background-color: #000;
+	color: #fff;
+	transition-duration: 0.5s;
+}
+div.input-right button:hover{
+	background-color: #666;
+	transition-duration: 0.5s;
+}
+/*로그인 저장 박스*/
+.svae-id{
+	clear: both;
+	margin-top: 10px;
+}
+.svae-id input{
+	vertical-align: middle;
+}
+.svae-id> span{
+	margin-left: 100px;
+}
+
+/*로그인 설명글*/
+.login-txt{
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: solid 1px #e5e5e5;
+	line-height: 1.5;
+	color: #999;
+}
+.login-txt> p:last-child{
+	color: #a48443;
+	margin-top: 20px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/*---------------서치 창----------------*/
+.search-container{
+	width: 30%;
+	margin: 70px auto;
+}
+.search-input{
+	width: 100%;
+	line-height: 40px;
+	border-bottom: solid 1px #e5e5e5;
+}
+.search-input input{
+	line-height: 40px;
+	border: 0;
+	font-size: 25px;
+}
+.search-input span{
+	float: right;
+	background-color: #000;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+.search-input span:hover{
+	background-color: #666;
+	transition-duration: 0.5s;
+}
+.search-input span svg{
+	fill: #fff;
+	vertical-align: middle;
+}
+
+
+.search-container> p{
+	margin-top: 10px;
+	color: #999;
+}
+
+.search-txt{
+	margin-top: 50px;
+}
+.search-txt h3{
+ 	color: #999;
+}
+.search-txt ul{
+	overflow: hidden;
+	margin-top: 20px;
+}
+.search-txt ul li{
+	float: left;
+	margin-right: 20px;
+	cursor: pointer;
+}
+/*------------오른쪽 네비--------------*/
+.right-nav{
+	position: absolute;
+	top: 0;
+	right: 5%;
+	line-height: 70px;
+}
+.right-nav span:not(.nav-line){
+	cursor: pointer;
+}
+.right-nav svg{
+	vertical-align: -5px;
+	fill: #666;
+}
+
+
+/*------------네비 언더라인--------------*/
+div.nav-underline{
+	width: 100%;
+	height: 1px;
+	background-color: #eaeaea;
+	position: absolute;
+	top: 70px;
+	left: 0;
+}
+
+div.header-space{
+	width: 100%;
+	height: 107px;
+}
+
+.slides {
+	width: 100%;
+	height: 830px;
+	overflow: hidden;
+}
+
+.slide01 {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.slide-left {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.swiper-content {
+	position: absolute;
+	width: 800px;
+	left: 300px;
+	top: 80px;
+	z-index: 2;
+}
+
+.swiper-wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+.slide-content {
+	width: 90%;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+	z-index: 2;
+	padding: 50px 125px;
+	display: flex;
+	align-items: center;
+}
+.slide-next-content {
+	width: 90%;
+	position: absolute;
+	height: 100%;
+	z-index: 1;
+}
+
+.slide-nav {
+	overflow: hidden;
+	width: 100%;
+}
+.slide-nav-list {
+	width: 70px;
+	height: 40px;
+	color: #fff;
+	border-bottom: 2px solid rgba(255,255,255,.2);
+	float: left;
+	cursor: pointer;
+}
+
+.slide-nav-list.on {
+	border-bottom-color: rgba(255,255,255,1);
+}
+
+.slide-text {
+	width: 100%;
+	font-size: 40pt;
+	line-height: 1.5;
+	color: #fff;
+	margin-top: 80px;
+	padding-left: 50px;
+	font-family: 'Nanum Myeongjo', serif;
+}
+.slide-sub-btn {
+	width: 50%;
+	margin-top: 80px;
+	padding-left: 50px;
+	position: relative;
+}
+#view-more {
+	border-bottom: 2px solid #fff;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px;
+}
+
+.slide-btn {
+	position: absolute;
+	top: 0;
+	right: 0px;
+}
+
+.slide-btn div:first-child {
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+
+.slide-btn svg {
+	width: 26px;
+	height: 26px;
+	fill: #fff;
+}
+.slide-ani{
+	margin-top: 150px;
+	color: #fff;
+	position: relative;
+}
+.slide-ani svg{
+	fill: #fff;
+}
+.slide-ani .ani-line{
+	position: absolute;
+	top: 26px;
+	left: 12px;
+	height: 100px;
+	overflow: hidden;
+}
+.ani-line p{
+	width: 1px;
+	height: 100px;
+	animation: hrline 2s linear;
+	animation-iteration-count:infinite;
+	background-color: #fff;
+}
+@keyframes hrline {
+  	0% {
+		height: 0;
+ 	 }
+  	10% {
+   		height: 100px;
+ 	}
+  	100%{
+  		margin-top: 100px;
+  	}
+}   
+
+.slide-ani p.ani-end{
+	margin-top: 100px;
+}
+.slide-image {
+	position: absolute;
+	right: 50px;
+	bottom: 0px;
+}
+
+
+
+/******************************
+
+		전체 컨텐츠 랩
+
+*******************************/
+
+#content-All-wrap{
+	width: 68%;
+	margin: 0 auto;
+}
+
+/****************이벤트 뉴스**************/
+#news-event{
+	width: 100%;
+	margin-top: 200px;
+	text-align: center;
+}
+h2.content-title{
+	font-size: 50px;
+	font-family: 'Nanum Myeongjo', serif;
+}
+.news-subtitle{
+	margin-top: 40px;
+	font-size: 12pt;
+	position: relative;
+	top: 50px;
+	opacity: 0;
+}
+.news-subtitle img{
+	vertical-align: -15px;
+}
+.news-subtitle> .login-btn{
+	color: #8b714c;
+	padding-bottom: 2px;
+	border-bottom: solid 1px #8b714c;
+}
+
+/*--이벤트 뉴스 리스트--*/
+.news-list-container{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 70px;
+}
+.news-list-container> div.news-list{
+	float: left;
+	width: 31.333%;
+	margin-right: 3%;
+	margin-bottom: 70px;
+	cursor: pointer;
+	text-align: left;
+	position: relative;
+	top: 50px;
+	opacity: 0;
+}
+.list-image{
+	overflow: hidden;
+}
+.list-image> img{
+	width: 100%;
+	transition:all 1s ease;
+}
+.news-list:hover> .list-image> img{
+	transform:scale(1.05, 1.05);
+	-webkit-transform:scale(1.05, 1.05);
+	-moz-transform:scale(1.05, 1.05);
+	filter: brightness(0.6);
+	transition: 1s ease;
+}
+.news-list-container> div.news-list:nth-child(3n){
+	margin-right: 0;
+}
+
+.news-list p{
+	margin-left: 10px;
+	margin-top: 16px;
+}
+.news-list .list-type{
+	color: #8b714c;
+	font-size: 10pt;
+}
+
+.news-list .list-title{
+	font-size: 14pt;
+	line-height: 1.4;
+}
+
+.news-list .list-date{
+	color: #999;
+}
+
+
+
+/*****VIEW MORE******/
+#view-more2{
+	display: inline-block;
+	text-align: center;
+	border-bottom: 2px solid red;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	transition-duration: 0.5s;
+}
+#view-more2:hover{
+	color: red;
+	transition-duration: 0.5s;
+}
+
+
+
+/**************신세계 나우**************/
+#shinsegae-now{
+	width: 100%;
+	margin-top: 150px;
+	text-align: center;
+}
+
+.shinsegae-now-container{
+	width: 100%;
+	overflow: hidden;
+	margin: 50px 0;
+}
+
+.shinsegae-now-container .shinsegae-now-list{
+	float: left;
+	width: 22.75%;
+	margin-right: 3%;
+	cursor: pointer;
+	position: relative;
+	top: 50px;
+	opacity: 0;
+}
+
+.shinsegae-now-container .shinsegae-now-list:last-child{
+	margin-right: 0;
+}
+.shinsegae-now-list img{
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.shinsegae-now-list> .hover-box{
+	width: 100%;
+	height: 0%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.8);
+	border-top: solid 3px red;
+	text-align: left;
+	transition: .4s ease-out;
+}
+.shinsegae-now-list:hover> .hover-box{
+	height: 60%;
+}
+.hover-box p{
+	margin: 20px;
+}
+.hover-box p.now-type{
+	color: #bea36b;
+}
+.hover-box p.now-type svg{
+	fill: #bea36b;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+.hover-box p.now-txt{
+	color: #fff;
+	font-size: 12pt;
+	line-height: 1.6;
+}
+
+.hover-box p.now-btn{
+	color: #999;
+}
+
+.shinsegae-channel{
+	margin-top: 70px;
+}
+.shinsegae-channel .channel{
+	font-weight: bold;
+	font-size: 14pt;
+	cursor: pointer;
+	position: relative;
+	opacity: 0;
+}
+.shinsegae-channel .channel> span{
+	display: inline-block;
+	border: solid 1px #000;
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+}
+.shinsegae-channel .channel:hover> span{
+	background-color: #000;
+}
+.shinsegae-channel .channel:hover> span svg{
+	fill: #fff;
+}
+.shinsegae-channel p{
+	margin-top: 15px;
+	position: relative;
+	opacity: 0;
+}
+.shinsegae-channel img{
+	margin-right: 10px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.sns-image {
+	width: 100%;
+	margin-top: 25px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sns-image00 {
+	margin:  auto;
+	margin: 0 10px;
+	width: 32px;
+	height: 32px;
+	background-size: 100%;
+	background-position: center;
+	cursor: pointer;
+	opacity: 0;
+	position: relative;
+	transition: 1.5s;
+}
+/*
+.sns-image01 {
+	background-image: url('../img/icon01.png');
+}
+
+.sns-image01:hover {
+	background-image: url('../img/icon01-1.png');
+}
+
+.sns-image02 {
+	background-image: url('../img/icon02.png');
+}
+
+.sns-image02:hover {
+	background-image: url('../img/icon02-1.png');
+}
+
+.sns-image03 {
+	background-image: url('../img/icon03.png');
+}
+
+.sns-image03:hover {
+	background-image: url('../img/icon03-1.png');
+}
+
+.sns-image04 {
+	background-image: url('../img/icon04.png');
+}
+
+.sns-image04:hover {
+	background-image: url('../img/icon04-1.png');
+}
+
+.sns-image05 {
+	background-image: url('../img/icon05.png');
+}
+
+.sns-image05:hover {
+	background-image: url('../img/icon05-1.png');
+}
+
+.sns-image06 {
+	background-image: url('../img/icon06.png');
+}
+
+.sns-image06:hover {
+	background-image: url('../img/icon06-1.png');
+}
+
+.sns-image07 {
+	background-image: url('../img/icon07.png');
+}
+
+.sns-image07:hover {
+	background-image: url('../img/icon07-1.png');
+}
+*/
+/*************아트앤 컬쳐 *************/
+#art-culture{
+	width: 100%;
+	margin-top: 150px;
+	height: 700px;
+}
+
+#art-culture .content-title{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	opacity: 1;
+	top: 0px;
+	text-align: center;
+}
+.sslide-container{
+	margin-top: 70px;
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+/*소슬라이드 왼쪽*/
+.left{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 55%;
+	height: 450px;
+}
+.bg-box{
+	width: 100%;
+	height: 100%;
+}
+.bg-box .bg-box-color{
+	width: 100%;
+	height: 100%;
+	background-color: #4e3531;
+}
+.content-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.sslid-title{
+	color: #e0c799;
+	font-size: 20px;
+}
+.sslid-txt{
+	font: bold 40px/1.5 'Nanum Myeongjo', serif;
+	color: #fff;
+	margin: 30px 0 50px 0;
+}
+ul.sslide-btn{
+	position: absolute;
+	bottom: 20px;
+	right: 150px;
+	z-index: 999;
+	overflow: hidden;
+}
+.sslide-pager{
+	float: left;
+	color: rgba(255, 255, 255, 0.5);
+	line-height: 30px;
+	margin-right: 50px;
+}
+.sslide-pager span{
+	color: #fff;
+}
+.sslide-pager span:after{
+	content: "/";
+	color: rgba(255, 255, 255, 0.5);
+	margin: 0 10px;
+}
+.sslide-sub-btn{
+	float: left;
+	width: 100px;
+}
+.sslide-sub-btn> div{
+	float: left;
+	width: 50%;
+}
+.sslide-sub-btn svg{
+	fill: #fff;
+	width: 30px;
+	vertical-align: middle;
+}
+
+/*소슬라이드 오른쪽*/
+.right{
+	position: absolute;
+	top: 40px;
+	right: 0;
+	width: 50%;
+}
+.right-img{
+	overflow: hidden;
+}
+.right-img> li{
+	width: 48%;
+	float: left;
+}
+.right-img> li:first-child{
+	margin-right: 4%;
+}
+.right-img img{
+	width: 100%;
+	vertical-align: bottom;
+}
+
+/*************************브랜드********************************/
+#brand{
+	width: 100%;
+	margin-top: 120px;
+	text-align: center;
+}
+#brand .content-title{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	opacity: 1;
+	top: 0px;
+}
+.tab-container{
+	margin-top: 80px;
+}
+.tab-title{
+	width: 100%;
+	position: relative;
+}
+.tab-title ul{
+	overflow: hidden;
+}
+.tab-title ul li{
+	float: left;
+	width: 33.333%;
+	text-align: center;
+	font-size: 40px;
+}
+.tab-sub-btn{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tab-sub-btn a{
+	margin: 0 200px;
+}
+.tab-content{
+	margin-top: 80px;
+	width: 100%;
+}
+/**********탭 박스 컨텐츠***********/
+.tab-content-box{
+	width: 100%;
+	border: solid 1px #e5e5e5;
+}
+.tab-list{
+	overflow: hidden;
+}
+.tab-list li{
+	width: 33.333%;
+	height: 430px;
+	float: left;
+	overflow: hidden;
+}
+.tab-list li img{
+	width: 100%;
+	height: 100%;
+	vertical-align: bottom;
+	transition: 0.5s ease;
+	cursor: pointer;
+}
+.tab-list li img:hover{
+	transform:scale(1.05, 1.05);
+	-webkit-transform:scale(1.05, 1.05);
+	-moz-transform:scale(1.05, 1.05);
+	filter: brightness(0.8);
+}
+.tab-txt-box{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.7;
+}
+.tab-list-tite{
+	font: bold 20px/1.7 'Nanum Myeongjo', serif;
+}
+.tab-txt{
+	margin: 30px 0;
+	font-size: 15px;
+	color: #666;
+}
+.detail{
+	margin: 0 auto;
+	width: 50px;
+	text-align: center;
+	cursor: pointer;
+}
+.detail:after{
+	margin: 0 auto;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #999;
+}
+.detail:hover:after{
+	animation: detailani 0.5s ease;
+}
+@keyframes detailani{
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 100%;
+	}
+}
+#brand #view-more2{
+	margin-top: 80px;
+}
+
+
+/*************************매거진*************************/
+#magazine{
+	width: 100%;
+	margin-top: 150px;
+}
+#magazine .content-title{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	opacity: 1;
+	top: 0px;
+	text-align: center;
+}
+.fixed-container{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 80px;
+}
+/*왼쪽 픽스 박스*/
+.fixed-content{
+	position: relative;
+	width: 30%;
+	float: left;
+	text-align: center;
+}
+.fixed-content-box{
+	cursor: pointer;
+}
+.fixed-content-box> div{
+	padding: 20px;
+	padding-top: 0;
+}
+.fixed-content-box> div img{
+	width: 100%;
+}
+.fixed-date{
+	margin: 30px 0;
+}
+.fixed-title{
+	font: bold 26px/1.6 'Nanum Myeongjo', serif;
+}
+/*오른쪽 매거진*/
+.fixed-magazine{
+	width: 70%;
+	float: right;
+	overflow: hidden;
+	display: flex;
+}
+.magazine-list{
+	float: left;
+	width: 33.333%;
+	border-left: solid 1px #e5e5e5;
+	padding: 0 20px;
+	flex: 1;
+}
+
+.Magazine-img{
+	width: 100%;
+	overflow: hidden;
+	border: solid 1px #e5e5e5;
+}
+.Magazine-img img{
+	width: 100%;
+	vertical-align: bottom;
+	transition: 0.8s ease;
+}
+.Magazine-title{
+	font-size: 18px;
+	margin: 16px 10px;
+	line-height: 1.5;
+	display: inline-block;
+	border-bottom: solid 1px transparent;
+}
+.Magazine-txt{
+	font-size: 14px;
+	margin: 0 10px;
+	color: #666;
+	line-height: 1.6;
+	text-align: justify;
+}
+.magazine-list li{
+	margin-bottom: 80px;
+	cursor: pointer;
+}
+.magazine-list li:hover> p> img{
+	transform:scale(1.05, 1.05);
+	-webkit-transform:scale(1.05, 1.05);
+	-moz-transform:scale(1.05, 1.05);
+	filter: brightness(0.8);
+}
+.magazine-list li:hover> p.Magazine-title{
+	border-bottom: solid 1px #999;
+}
+
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+}
