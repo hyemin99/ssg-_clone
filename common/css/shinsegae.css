@@ -45,11 +45,12 @@ header{
 	top: 0;
 	left: 5%;
 	line-height: 70px;
+}
+.logo{
 	font-size: 30px;
 	font-weight: 700;
 	letter-spacing: 3px;
 }
-
 /*------------가운데 메뉴--------------*/
 .center-nav{
 	width: 100%;
@@ -208,11 +209,16 @@ div.sub-menu{
 	width: 50px;
 	height: 50px;
 	background-color: #fff;
-	border: solid 1px #e5e5e5;
+	border: solid 1px #dad9d9;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+.close-popmenu:hover{
+	background-color: rgb(240, 240, 240);
 }
 /*---------------로그인 창----------------*/
 .login-container{
@@ -379,30 +385,31 @@ div.nav-underline{
 	top: 70px;
 	left: 0;
 }
-
 div.header-space{
 	width: 100%;
 	height: 107px;
 }
-
 .slides {
 	width: 100%;
 	height: 830px;
 	overflow: hidden;
 }
-
+.slides h2{
+	text-indent: -999em;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 .slide01 {
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
-
 .slide-left {
 	width: 100%;
 	height: 100%;
 	display: flex;
 }
-
 .swiper-content {
 	position: absolute;
 	width: 800px;
@@ -410,12 +417,10 @@ div.header-space{
 	top: 80px;
 	z-index: 2;
 }
-
 .swiper-wrapper {
 	position: relative;
 	z-index: 1;
 }
-
 .slide-content {
 	width: 90%;
 	height: 100%;
@@ -432,7 +437,6 @@ div.header-space{
 	height: 100%;
 	z-index: 1;
 }
-
 .slide-nav {
 	overflow: hidden;
 	width: 100%;
@@ -445,11 +449,9 @@ div.header-space{
 	float: left;
 	cursor: pointer;
 }
-
 .slide-nav-list.on {
 	border-bottom-color: rgba(255,255,255,1);
 }
-
 .slide-text {
 	width: 100%;
 	font-size: 40pt;
@@ -539,7 +541,7 @@ div.header-space{
 
 *******************************/
 
-#content-All-wrap{
+.content-all-wrap{
 	width: 68%;
 	margin: 0 auto;
 }
@@ -547,7 +549,7 @@ div.header-space{
 /****************이벤트 뉴스**************/
 #news-event{
 	width: 100%;
-	margin-top: 200px;
+	margin-top: 150px;
 	text-align: center;
 }
 h2.content-title{
@@ -626,7 +628,7 @@ h2.content-title{
 
 
 /*****VIEW MORE******/
-#view-more2{
+.view-more2{
 	display: inline-block;
 	text-align: center;
 	border-bottom: 2px solid red;
@@ -634,8 +636,9 @@ h2.content-title{
 	font-weight: bold;
 	padding-bottom: 2px;
 	transition-duration: 0.5s;
+	margin-top: 50px;
 }
-#view-more2:hover{
+.view-more2:hover{
 	color: red;
 	transition-duration: 0.5s;
 }
@@ -929,7 +932,7 @@ ul.sslide-btn{
 	vertical-align: bottom;
 }
 
-/*************************브랜드********************************/
+/*************************브랜드***********************/
 #brand{
 	width: 100%;
 	margin-top: 120px;
@@ -1042,11 +1045,6 @@ ul.sslide-btn{
 		width: 100%;
 	}
 }
-#brand #view-more2{
-	margin-top: 80px;
-}
-
-
 /*************************매거진*************************/
 #magazine{
 	width: 100%;
@@ -1140,8 +1138,6 @@ ul.sslide-btn{
 .magazine-list li:hover> p.Magazine-title{
 	border-bottom: solid 1px #999;
 }
-
-
 .swiper-container {
 	width: 100%;
 	height: 100%;
@@ -1164,7 +1160,93 @@ ul.sslide-btn{
 	-webkit-align-items: center;
 	align-items: center;
 }
-
 .swiper-slide img {
 	width: 100%;
+}
+#magazine> div:last-child{
+	clear: both;
+	text-align: center;
+}
+/*****************************************/
+footer{
+	width: 100%;
+	background-color: #222;
+	margin-top: 100px;
+	border: solid 1px #222;
+	padding: 50px 0;
+}
+#footer-container{
+	width: 70%;
+	margin: 0 auto;
+}
+/*상단 푸터 */
+.footer-box{
+	width: 100%;
+	overflow: hidden;
+}
+.footer-box .logo{
+	color: #fff;
+	float: left;
+}
+.company-info{
+	float: left;
+	margin-left: 50px;
+}
+.company-info a{
+	margin-left: 20px;
+	font-size: 15px;
+	color: #999;
+	line-height: 1.8;
+	transition-duration: 0.5s;
+}
+.company-info a:hover{
+	color: #fff;
+}
+/*상단 푸터 sns 로고*/
+.footer-box02{
+	width: 100%;
+}
+.footer-box02 .btn-family-sns{
+	float: right;
+}
+.btn-family-sns> div{
+	float: left;
+}
+.btn-family{
+	text-align: center;
+	color: #999;
+	border-bottom: solid 1px #999;
+	margin-right: 30px;
+}
+.family{
+	line-height: 30px;
+	position: relative;
+}
+.popup-family{
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	background-color: #222;
+}
+.arr-sns{
+	margin-left: 10px;
+}
+.footer-sns> svg{
+	fill: #999;
+	margin: 0 5px;
+	vertical-align: middle;
+}
+/*하단 푸터*/
+.footer-bottom{
+	width: 100%;
+	margin-top: 40px;
+	border-top: solid 1px rgba(255, 255, 255, 0.1);
+	padding-top: 20px;
+	color: #999;
+	line-height: 1.8;
 }

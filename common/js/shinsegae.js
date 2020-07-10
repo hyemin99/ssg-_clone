@@ -76,6 +76,12 @@ $(function(){
 		}
 	});
 
+	$(".btn-family").on("click", function(){
+		$(".popup-family").stop().animate({
+			"height" : "400%",
+			"opacity" : "1"
+		});
+	});
 	/*$('.shinsegae-now-list').on('mouseenter', function () {
 		$(this).find('.hover-box').animate({'bottom': '0'}, 400);
 	}).on('mouseleave', function () {
