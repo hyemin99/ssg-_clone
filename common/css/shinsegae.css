@@ -1,13 +1,19 @@
 /*
 *header
 */
+body{
+	width: 100%;
+	min-width: 1900px;
+	margin: 0 auto;
+}
 header{
 	position: fixed;
 	width: 100%;
+	min-width: 1900px;
 	top: 0;
 	left: 0;
 	background-color: #fff;
-	z-index: 20;
+	z-index: 999;
 }
 
 /**********************탑 네비********************/
@@ -320,9 +326,9 @@ div.input-right button:hover{
 	font-size: 25px;
 }
 .search-input span{
-	float: right;
 	background-color: #000;
-	display: inline-block;
+	float: right;
+	display: block;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -387,7 +393,7 @@ div.nav-underline{
 }
 div.header-space{
 	width: 100%;
-	height: 107px;
+	height: 105px;
 }
 .slides {
 	width: 100%;
@@ -481,10 +487,17 @@ div.header-space{
 }
 
 .slide-btn div:first-child {
-	margin-bottom: 40px;
-	cursor: pointer;
+	margin-bottom: 20px;
 }
-
+.slide-btn> div{
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 50%;
+	transition-duration: 0.5s;
+}
+.slide-btn> div:hover{
+	background-color: rgba(0, 0, 0, 0.2);
+}
 .slide-btn svg {
 	width: 26px;
 	height: 26px;
@@ -827,13 +840,13 @@ h2.content-title{
 	width: 100%;
 	margin-top: 150px;
 	height: 700px;
+	overflow: hidden;
 }
 
 #art-culture .content-title{
 	width: 100%;
 	height: 50px;
 	position: relative;
-	opacity: 1;
 	top: 0px;
 	text-align: center;
 }
@@ -851,20 +864,36 @@ h2.content-title{
 	width: 55%;
 	height: 450px;
 }
-.bg-box{
-	width: 100%;
-	height: 100%;
-}
-.bg-box .bg-box-color{
-	width: 100%;
-	height: 100%;
-	background-color: #4e3531;
-}
 .content-box{
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	width: 100%;
+	height: 100%;
 	transform: translate(-50%, -50%);
+}
+.content-box> li{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 100px 300px;
+}
+.content-box> li.on{
+	z-index: 999;
+}
+.ss-content01{
+	background-color: #4e3531;
+}
+.ss-content02{
+	background-color: #3a4b5a;
+}
+.ss-content03{
+	background-color: rgb(105, 72, 72);
+}
+.ss-content04{
+	background-color: #405a3a;
 }
 .sslid-title{
 	color: #e0c799;
@@ -887,6 +916,7 @@ ul.sslide-btn{
 	color: rgba(255, 255, 255, 0.5);
 	line-height: 30px;
 	margin-right: 50px;
+	padding: 10px;
 }
 .sslide-pager span{
 	color: #fff;
@@ -903,6 +933,14 @@ ul.sslide-btn{
 .sslide-sub-btn> div{
 	float: left;
 	width: 50%;
+	height: 50%;
+	cursor: pointer;
+	border-radius: 50%;
+	padding: 10px;
+	transition-duration: 0.5s;
+}
+.sslide-sub-btn> div:hover{
+	background-color: rgba(0, 0, 0, 0.2);
 }
 .sslide-sub-btn svg{
 	fill: #fff;
@@ -912,13 +950,17 @@ ul.sslide-btn{
 
 /*소슬라이드 오른쪽*/
 .right{
-	position: absolute;
+	position: relative;
+	float: right;
 	top: 40px;
 	right: 0;
 	width: 50%;
-}
-.right-img{
 	overflow: hidden;
+}
+.swiper-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .right-img> li{
 	width: 48%;
@@ -970,7 +1012,7 @@ ul.sslide-btn{
 	align-items: center;
 	justify-content: center;
 }
-.tab-sub-btn a{
+.tab-sub-btn div{
 	margin: 0 200px;
 }
 .tab-content{

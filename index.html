@@ -381,10 +381,10 @@
 						</div>
 					</div>
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="./common/img/slides01.jpg" alt="슬라이드 이미지01"/></div>
-						<div class="swiper-slide"><img src="./common/img/slides02.jpg" alt="슬라이드 이미지02"/></div>
-						<div class="swiper-slide"><img src="./common/img/slides03.jpg" alt="슬라이드 이미지03"/></div>
-						<div class="swiper-slide"><img src="./common/img/slides04.jpg" alt="슬라이드 이미지04"/></div>
+						<div class="swiper-slide"><img src="./common/img/slide-bg.jpg" alt="슬라이드 이미지01"/></div>
+						<div class="swiper-slide"><img src="./common/img/slide-bg02.jpg" alt="슬라이드 이미지02"/></div>
+						<div class="swiper-slide"><img src="./common/img/slide-bg03.jpg" alt="슬라이드 이미지03"/></div>
+						<div class="swiper-slide"><img src="./common/img/slide-bg04.jpg" alt="슬라이드 이미지04"/></div>
 					</div>
 				</div>
 			</div>
@@ -539,16 +539,28 @@
 	</div><!--컨텐츠 전체 랩-->
 
 	<div id="art-culture">
-		<h2 class="content-title">Art & Culture</h2>
+		<h2 class="content-title" data-aos="fade-up">Art & Culture</h2>
 		<div class="sslide-container">
-			<div class="left">
-				<ul class="bg-box">
-					<li class="bg-box-color on"></li>
-				</ul>
+			<div class="left" data-aos="fade-right" data-aos-duration="800"> 
 				<ul class="content-box">
-					<li class="ss-content on">
+					<li class="ss-content01 on">
 						<h3 class="sslid-title">SHINSEGAE GALLERY</h3>
 						<p class="sslid-txt">대구신세계갤러리<br>차규선 화원/花園</p>
+						<div><a href="#" id="view-more">VIEW MORE</a></div>
+					</li>
+					<li class="ss-content02">
+						<h3 class="sslid-title">SHINSEGAE ACADEMY</h3>
+						<p class="sslid-txt">신세계 아카데미 여름학기<br>단기강좌 회원 모집</p>
+						<div><a href="#" id="view-more">VIEW MORE</a></div>
+					</li>
+					<li class="ss-content03">
+						<h3 class="sslid-title">SHINSEGAE GALLERY</h3>
+						<p class="sslid-txt">명동 본점 갤러리<br>Timeless展</p>
+						<div><a href="#" id="view-more">VIEW MORE</a></div>
+					</li>
+					<li class="ss-content04">
+						<h3 class="sslid-title">SHINSEGAE GALLERY</h3>
+						<p class="sslid-txt">광주신세계 갤러리<br>사유의 숲</p>
 						<div><a href="#" id="view-more">VIEW MORE</a></div>
 					</li>
 				</ul>
@@ -568,10 +580,12 @@
 					</li>
 				</ul>
 			</div><!--left 닫기-->
-			<div class="right">
-				<ul class="right-img">
-					<li><img src="./common/img/cultures01.jpg"></li>
-					<li><img src="./common/img/cultures02.jpg"></li>
+			<div class="right" data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
+				<ul class="right-img swiper-wrapper">
+					<li class="swiper-slide"><img src="./common/img/cultures01.jpg"></li>
+					<li class="swiper-slide"><img src="./common/img/cultures02.jpg"></li>
+					<li class="swiper-slide"><img src="./common/img/cultures03.jpg"></li>
+					<li class="swiper-slide"><img src="./common/img/cultures04.jpg"></li>
 				</ul>
 			</div>
 		</div>
@@ -588,16 +602,16 @@
 						<li>ELLACONIC</li>
 					</ul>
 					<div class="tab-sub-btn">
-						<a href="tab-prev-btn">
+						<div href="tab-prev-btn">
 							<svg viewBox="0 0 24 24" width="24" height="24">
 								<path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/>
 							</svg>
-						</a>
-						<a href="tab-next-btn">
+						</div>
+						<div href="tab-next-btn">
 							<svg viewBox="0 0 24 24" width="24" height="24">
 								<path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
 							</svg>
-						</a>
+						</div>
 					</div>
 				</div><!--tab-title-->
 				<div class="tab-content">
@@ -808,6 +822,32 @@
 			});
 
 			$('.slide-nav .slide-nav-list:nth-child('+(slideTextIndex + 1)+')').addClass('on');
+		});
+
+		var swiper = new Swiper('.right', {
+			slidesPerView: 2,
+    	  	spaceBetween: 30,
+			loop: true,
+			navigation: {
+				nextEl: '.sslide-next-btn',
+				prevEl: '.sslide-prev-btn',
+			},
+		});
+		swiper.on('slideChange', function () {
+			var slideIndex = this.activeIndex;
+			var slideTextIndex = 0;
+			console.log(slideIndex);
+
+			if (slideIndex == 2 || slideIndex == 6) slideTextIndex = 0;
+			else if (slideIndex == 3) slideTextIndex = 1;
+			else if (slideIndex == 4) slideTextIndex = 2;
+			else if (slideIndex == 5 || slideIndex == 1) slideTextIndex = 3;
+
+			$('.content-box li').each(function () {
+				$(this).removeClass('on');
+			});
+
+			$('.content-box .ss-content0'+(slideTextIndex + 1)+'').addClass('on');
 		});
 
 		AOS.init();

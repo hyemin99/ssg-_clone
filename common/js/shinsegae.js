@@ -82,6 +82,8 @@ $(function(){
 			"opacity" : "1"
 		});
 	});
+
+	
 	/*$('.shinsegae-now-list').on('mouseenter', function () {
 		$(this).find('.hover-box').animate({'bottom': '0'}, 400);
 	}).on('mouseleave', function () {
