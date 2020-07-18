@@ -1002,9 +1002,16 @@ ul.sslide-btn{
 }
 .tab-title li{
 	text-align: center;
-	font-size: 40px;
-	line-height: 40px;
+	line-height: 30px;
 	color: rgb(187, 187, 187);
+	font: bold 30px 'Nanum Myeongjo', serif;
+}
+.tab-title li.boontheshop{
+	letter-spacing: 5px;
+}
+.tab-title li.onoma{
+	font-size: 50px;
+	line-height: 20px;
 }
 .tab-title .swiper-slide-next{
 	color: #000;
@@ -1014,7 +1021,7 @@ ul.sslide-btn{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 40px;
+	height: 30px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1119,16 +1126,21 @@ ul.sslide-btn{
 }
 .fixed-container{
 	width: 100%;
-	overflow: hidden;
 	margin-top: 80px;
+	position: relative;
+	overflow: hidden;
 }
 /*왼쪽 픽스 박스*/
 .fixed-content{
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 30%;
 	float: left;
 	text-align: center;
+	background-color: #fff;
 }
+
 .fixed-content-box{
 	cursor: pointer;
 }

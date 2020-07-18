@@ -83,7 +83,20 @@ $(function(){
 		});
 	});
 
-	
+	var offset = $(".fixed-container").offset();
+	var fixedContent = $(".fixed-content");
+	var fixed = fixedContent.find(".fixed-content-box");
+	var tmp = fixedContent.find(".fixed-content-box").clone().attr("class", "tmp").css("visibility", "hidden");
+
+	window.addEventListener("scroll", function(){
+		if (window.pageYOffset > offset.top) {
+			fixedContent.append(tmp);
+			fixed.css({"position" : "fixed", "top" : "130px", "width" : "390px"});
+		} else {
+			fixedContent.find(".tmp").remove();
+			fixed.css({"position" : "static", "top" : ""});
+		}
+	});
 	/*$('.shinsegae-now-list').on('mouseenter', function () {
 		$(this).find('.hover-box').animate({'bottom': '0'}, 400);
 	}).on('mouseleave', function () {
