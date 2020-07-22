@@ -1136,11 +1136,22 @@ ul.sslide-btn{
 	top: 0;
 	left: 0;
 	width: 30%;
-	float: left;
 	text-align: center;
-	background-color: #fff;
 }
-
+.fixed-hidden{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 30%;
+	text-align: center;
+	opacity: 0;
+}
+.fixed-content.fix{
+	position: fixed;
+	top: 130px;
+	left: 16%;
+	width: 20.4%;
+}
 .fixed-content-box{
 	cursor: pointer;
 }

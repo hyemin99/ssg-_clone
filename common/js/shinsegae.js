@@ -83,6 +83,31 @@ $(function(){
 		});
 	});
 
+	$(window).on("scroll", function(){
+		var mysc = $(this).scrollTop();
+		var myoffset = $(".fixed-container").offset();
+
+		if (mysc < myoffset.top) {
+			$(".fixed-content").removeClass("fix");
+		} else {
+			$(".fixed-content").addClass("fix");
+		} 
+
+
+		if (mysc > 6600) {
+			$(".fixed-content").removeClass("fix");
+			$(".fixed-hidden").css({
+				"opacity" : "1"
+			});
+		} else {
+			$(".fixed-hidden").css({
+				"opacity" : "0"
+			});
+		}
+	});
+
+
+/*
 	var offset = $(".fixed-container").offset();
 	var fixedContent = $(".fixed-content");
 	var fixed = fixedContent.find(".fixed-content-box");
@@ -96,7 +121,7 @@ $(function(){
 			fixedContent.find(".tmp").remove();
 			fixed.css({"position" : "static", "top" : ""});
 		}
-	});
+	});*/
 	/*$('.shinsegae-now-list').on('mouseenter', function () {
 		$(this).find('.hover-box').animate({'bottom': '0'}, 400);
 	}).on('mouseleave', function () {
