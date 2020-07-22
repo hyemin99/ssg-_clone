@@ -97,11 +97,11 @@ $(function(){
 		if (mysc > 6600) {
 			$(".fixed-content").removeClass("fix");
 			$(".fixed-hidden").css({
-				"opacity" : "1"
+				"display" : "block"
 			});
 		} else {
 			$(".fixed-hidden").css({
-				"opacity" : "0"
+				"display" : "none"
 			});
 		}
 	});

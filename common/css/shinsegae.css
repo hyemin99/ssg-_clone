@@ -1144,7 +1144,7 @@ ul.sslide-btn{
 	left: 0;
 	width: 30%;
 	text-align: center;
-	opacity: 0;
+	display: none;
 }
 .fixed-content.fix{
 	position: fixed;
