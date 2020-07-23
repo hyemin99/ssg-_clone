@@ -1138,14 +1138,6 @@ ul.sslide-btn{
 	width: 30%;
 	text-align: center;
 }
-.fixed-hidden{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 30%;
-	text-align: center;
-	display: none;
-}
 .fixed-content.fix{
 	position: fixed;
 	top: 130px;
@@ -1294,34 +1286,55 @@ footer{
 .btn-family-sns> div{
 	float: left;
 }
-.btn-family{
-	text-align: center;
-	color: #999;
-	border-bottom: solid 1px #999;
-	margin-right: 30px;
-}
 .family{
 	line-height: 30px;
 	position: relative;
+	width: 150px;
+	text-align: center;
+	color: #999;
+	border: solid 1px transparent;
+	border-bottom: solid 1px #999;
+	margin-right: 30px;
+	transition: 1s ease;
+	cursor: pointer;
+	bottom: 10px;
+}
+.family> li:hover{
+	background-color: #444;
+	color: #fff;
 }
 .popup-family{
 	position: absolute;
 	bottom: 100%;
 	left: 0;
-	z-index: 999;
 	width: 100%;
 	opacity: 0;
 	height: 0;
 	overflow: hidden;
 	background-color: #222;
+	color: #999;
+}
+.popup-family li{
+	border: solid 1px #666;
+	border-bottom: 0;
+}
+.popup-family li:hover{
+	color: #fff;
+	background-color: #444;
+	cursor: pointer;
 }
 .arr-sns{
-	margin-left: 10px;
+	position: absolute;
+	top: 1px;
+	transform-origin: 50% 80%;
+	right: 15px;
+	height: 16px;
 }
 .footer-sns> svg{
 	fill: #999;
 	margin: 0 5px;
 	vertical-align: middle;
+	cursor: pointer;
 }
 /*하단 푸터*/
 .footer-bottom{
